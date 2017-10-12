@@ -1,0 +1,20 @@
+{
+  "name": "gas-typescript",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/google-apps-script": "^0.0.14",
+    "browserify": "^14.4.0",
+    "gasify": "^0.1.2",
+    "node-google-apps-script": "^1.1.5",
+    "tslint": "^5.7.0",
+    "typescript": "2.5"
+  },
+  "dependencies": {},
+  "scripts": {
+    "gasify": "yarn browserify -- build/*.js -p gasify -o public/bundle.js",
+    "build": "yarn tsc -p && yarn browserify -- build/*.js -p gasify -o public/bundle.js"
+  }
+}
